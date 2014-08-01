@@ -115,10 +115,23 @@ button {
   float: left;
   padding: 0px 10px;
   border-right: 2px solid #fff;
+  font-size: 11px;
+}
+#AXPage #AXPageHead .page-head-tool .page-head-menu-1 a {
+  display: inline-block;
+  padding: 0px 10px;
+  border-right: 2px solid #fff;
+  font-size: 11px;
+}
+#AXPage #AXPageHead .page-head-tool .page-head-menu-1 select {
+  margin-left: 10px;
+}
+#AXPage #AXPageHead .page-head-tool .page-head-menu-1 input {
+  width: 100px;
 }
 #AXPage #AXPageHead .page-head-menu {
   position: relative;
-  height: 79px;
+  min-height: 79px;
 }
 #AXPage #AXPageHead .page-head-menu #site-logo {
   display: block;
@@ -127,6 +140,7 @@ button {
   background: url("images/logo.png");
 }
 #AXPage #AXPageHead .page-head-menu .page-top-menu ul {
+  float: right;
   margin: 0px;
   padding: 15px 0px 0px 30px;
 }
@@ -143,6 +157,7 @@ button {
   height: 394px;
   background: url("images/main-visual.png") no-repeat;
   background-size: cover;
+  margin-bottom: 20px;
 }
 #AXPage #AXPageBody .main-block-group .ax-unit {
   margin: 10px 10px;
@@ -183,6 +198,49 @@ button {
 #AXPage #AXPageBody .main-block-group .page-main-block.block-2 {
   background: url("images/block-2.png") no-repeat center center;
 }
+#AXPage #AXPageBody .main-block-group .notice-tab-group {
+  position: relative;
+  height: 27px;
+  border-bottom: 2px solid #033164;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-item {
+  display: block;
+  float: left;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px 15px;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  font-weight: bold;
+  border-left: 1px solid #ccc;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-item:last-child {
+  border-right: 1px solid #ccc;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-item.on,
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-item:hover,
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-item:active {
+  background: #033164;
+  color: #fff;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-group .tab-more {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 11px;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-contents .tab-content {
+  font-size: 12px;
+  line-height: 20px;
+  display: none;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-contents .tab-content.on {
+  display: block;
+}
+#AXPage #AXPageBody .main-block-group .notice-tab-contents .tab-content ul {
+  margin: 0px;
+  padding: 10px 20px;
+}
 #AXPage #AXPageFoot .ax-wrap {
   background: url("images/foot-logo.png") no-repeat left center;
 }
@@ -204,5 +262,7 @@ button {
 }
 #AXPage #AXPageFoot .ax-wrap .page-foot-copyright {
   padding: 10px;
-  padding-left: 150px;
+  padding-left: 160px;
+  font-size: 11px;
+  line-height: 18px;
 }

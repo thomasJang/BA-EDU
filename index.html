@@ -10,7 +10,21 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="layouts/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="layouts/css/content.css" />
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery("#tabs-target").find(".tab-item").bind("mouseover", function(event){
+                var seq = event.target.id.split(/\-/)[1];
+                //console.log(seq);
+
+                jQuery("#tabs-target").find(".tab-item").removeClass("on");
+                jQuery("#tabs-content-target").find(".tab-content").removeClass("on");
+
+                jQuery("#tab-" + seq).addClass("on");
+                jQuery("#tab-content-" + seq).addClass("on");
+            });
+        });
+    </script>
     <style type="text/css">
     .ax-wrap{
 
@@ -86,16 +100,39 @@
                     <div class="ax-col-4">
                         <div class="ax-unit firstItem">
                             <div class="notice-tab-group">
-                                <a href="#" class="tab-item on" id="">새소식</a>
-                                <a href="#" class="tab-item" id="">공지사항</a>
-                                <a href="#" class="tab-item" id="">채용정보</a>
-
+                                <div class="tabs" id="tabs-target">
+                                    <a href="#" class="tab-item on" id="tab-0">새소식</a>
+                                    <a href="#" class="tab-item" id="tab-1">공지사항</a>
+                                    <a href="#" class="tab-item" id="tab-2">채용정보</a>
+                                </div>
                                 <a href="#" class="tab-more">더보기</a>
                             </div>
-                            <div class="notice-tab-contents">
-                                <div class="tab-content on" id=""></div>
-                                <div class="tab-content" id=""></div>
-                                <div class="tab-content" id=""></div>
+                            <div class="ax-clear"></div>
+                            <div class="notice-tab-contents" id="tabs-content-target">
+                                <div class="tab-content on" id="tab-content-0">
+                                    <ul>
+                                        <li>[6.20] 1단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 1단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 1단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 1단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="tab-content-1">
+                                    <ul>
+                                        <li>[6.20] 2단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 2단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 2단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 2단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="tab-content-2">
+                                    <ul>
+                                        <li>[6.20] 3단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 3단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 3단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                        <li>[6.20] 3단국대병원 – 한국심장재단, ‘심장병 광자… </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
